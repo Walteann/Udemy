@@ -1,0 +1,171 @@
+/*
+*	@Walteann, Udemy, clone tela principal spotify, aplicação direta de bootstrap, didatico. 
+*
+*
+*/
+/* --        */
+
+/*================== layout =================*/
+html,body, .capa{
+	height: 100%; 			/* definir altura para body,html e .capa 100% */
+}
+body{
+
+	background: url('imagens/capa.png') ,      /* imagem de fundo.  */
+				url('imagens/ruido.png'),		/* segunda imagem de fundo para da um efeito.  */
+				linear-gradient(50deg,#ff4169,#7c26f8); /* efeito degrader  */
+	background-attachment: fixed;		/* fixar o background, para que ele repitar, mas não mova  */
+	font-family: Helvetica,Arial,sans-serif;	/* Fonte de todo Body */
+	overflow-x: hidden; 	/* remove a barra de rolamento horizontal */
+}
+
+
+/* --- barra de navegação -- */
+.img-log{
+	height: 40px;  			/* altura da logo  */
+	width: 132px;			/* largura da logo  */
+	display: block;			/* display do tipo Block  */
+	background: url('imagens/spotify.svg') no-repeat;  /* imagem da logo em svg e que não repita  */
+	background-size: contain;/* Escala a img, para q tenha a mesma altura e largura definida nesse bloco */
+	color: transparent;  			/* Cor transparente  */
+}
+
+nav.navbar-transparente{
+	padding: 15px 0px; 		/* padding  */
+	background: rgba(0,0,0,0.6); /* Cor rgba, com opacidade de 0.6, para de transparencia  */
+	border: none; /* remove as bordas */
+}
+
+.navbar-brand{
+	
+	padding: 5px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a, #rodape .nav a{
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, #rodape .nav a:hover{
+	color: #9bf0e1;
+	background: none;
+}
+/* --- Montar imagem de capa -- */
+
+.capa {
+		
+		display: table; /* coloca toda capa como tabela,  */
+		width: 100%
+}
+.texto-capa {
+	text-align:center;  /* alinha todo conteudo dentro da capa  */
+	color: white;  
+	display: table-cell;  /* diz que os textos são celulas da capa */
+	vertical-align: middle;  /* alinha verticamente, no "meio"  'middle' */
+ 
+}
+/* --- botoes -- */
+
+.btn-custom{
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;  /* informa q possa pega em google chrome anteriores */
+	-moz-border-radius: 500px;   /* informa q possa pega em mozila firefox anteriores */
+	padding: 10px 35px;
+	text-transform: uppercase;   /* deixa todo texto em MAIUSCULO */
+	margin: 0px 15px;
+	transition: background 0.4s, color 0.4s;  /* faz o efeito de transição do botao */
+	
+}
+.btn-roxo{
+	background: #7c25f8;
+}
+.btn-roxo:hover{
+	background-color: #6207e3;
+	color: white;
+}
+.btn-branco {
+	border: 2px solid white;
+}
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+
+
+/* --- seção serviços -- */
+
+#servicos{
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.albuns {
+	padding: 10px 0px 10px 0;
+}
+
+/* --- seção recursos -- */
+
+#recursos{
+	
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar{
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	padding-left: 80px;
+
+}
+
+/* --- footer rodape -- */
+
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.item-rede-social{
+	float: right;
+}
+
+/* ========================= Tipologia ======================*/
+h1 {
+	font-size: 100px;
+	font-weight: 900;
+	letter-spacing: -0.05em;  /* da espaço entre as letras; */
+	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+h3{
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#servicos h2,#servicos h3{
+	color: #7c25f8;
+}
+#recursos h3{
+	color: #9bf0e1;
+}
