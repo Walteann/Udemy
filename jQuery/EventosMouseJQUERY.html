@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>
+			jquery Eventos - Mouse
+		</title>
+
+		<!-- local host -->
+		<script src="jquery-3.1.1.js"></script>
+
+		<!--  .click() - acionado no clique do mouse -->
+		<!--  .dblclick() - acionado  no clique dublo do mouse -->
+		<!--  .mousedown() - acionado no clique do mouse (soltando ou não o botão)-->
+		<!--  .mouseover() - acionado quando o cursor do mouse sobrepoe o elemento da página -->
+		<!--  .mouseout() - acionado quando o cursor do mouse sai da área de um elemento da página -->
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				$('#div1').click(function(){
+					alert('Elemento foi clicado')
+				});
+
+				$('#div2').dblclick(function(){
+					alert('Elemento foi clicado dblclick 2x')
+				});
+
+				$('#div3').mousedown(function(){
+					alert('Elemento foi clicado mousedown')
+				});
+
+				$('#div4').mouseover(function(){
+					alert('Elemento foi clicado mouseover em passar o mouse pelo elemento')
+				});
+				$('#div5').mouseout(function(){
+					alert('Elemento foi clicado mouseout')
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="height: 120px; width: 120px; background: #CCC">
+			click()
+		</div>
+		<br>
+		<div id="div2" style="height: 120px; width: 120px; background: #000; color: red;">
+			dblclick()
+		</div>
+		<br>
+		<div id="div3" style="height: 120px; width: 120px; background: green;">
+			mousedown
+		</div>
+
+		<br>
+		<div id="div4" style="height: 120px; width: 120px; background: orange">
+			mouseover
+		</div>
+
+		<br>
+		<div id="div5" style="height: 120px; width: 120px; background: blue">
+			mouseout
+		</div>
+		
+	</body>
+</html>	

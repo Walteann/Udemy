@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<title>
+			jquery Eventos - Teclados
+		</title>
+
+		<!-- local host -->
+		<script src="jquery-3.1.1.js"></script>
+
+	
+
+		<script type="text/javascript">
+			// .keydown() Acionado no momento em que uma tecla é pressionada( soltando-a ou não).
+			// .keypress() Acionado no momento em que uma tecla é pressionada( soltando-a ou não) porém não captura todas as teclas como por exemplo, alt, ctrl esc. shift, etc..
+
+			// .keyup() acionada no momento em que a tecla é liberada.
+
+
+			$(document).ready(function(){
+
+				$('#keydown').keydown(function(){
+					alert('Uma tecla foi pressionada "keydown"  ');
+				});
+
+				$('#keypress').keypress(function(){
+					alert('Uma tecla foi pressioanda "keypress" não captura ctrl,alt,esc');
+				});
+
+				$('#keyup').keyup(function(){
+					alert('uma tecla foi precionada e solta  " keyup"');
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		
+		<div>
+			keydown
+			<input id="keydown" type="text" />
+		</div>
+		<br><br>
+
+				
+		<div>
+			keypress
+			<input id="keypress" type="text" />
+		</div>
+		<br><br>
+
+				
+		<div>
+			keyup
+			<input id="keyup" type="text" />
+		</div>
+		<br><br>
+
+
+		
+	</body>
+</html>	
